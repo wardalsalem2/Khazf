@@ -12,7 +12,8 @@
                         An online platform that connects tourists and locals with unique cultural and adventure experiences across Jordan. 
                         Discover local workshops, explore authentic destinations, and create unforgettable memories with <span>Khazf</span>.
                     </p>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">
+                        Click here</a>
                 </div>
             </div>
             <!-- Slide 2 -->
@@ -23,7 +24,7 @@
                         From traditional cooking classes to desert adventures and cultural workshops — Khazf offers hand-picked experiences 
                         that let you connect with Jordan’s heart and soul. Start your journey with us and live like a local.
                     </p>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click here</a>
                 </div>
             </div>
             <!-- Slide 3 -->
@@ -34,7 +35,8 @@
                         Go beyond the typical tourist spots and dive into truly local experiences. Whether it's exploring ancient trails, 
                         joining a Bedouin storytelling night, or learning traditional crafts — Khazf connects you to the real Jordan.
                     </p>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">
+Click here</a>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -228,87 +230,77 @@
 
 <!-- Services Section -->
 <section id="services" class="services section">
-    <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>Our Services</h2>
-        <p>What We Offer</p>
-    </div><!-- End Section Title -->
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-brush" style="color: #0dcaf0;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Handcrafted Pottery</h3>
-                    </a>
-                    <p>Unique and authentic pottery pieces made by skilled artisans, perfect for your home or gifts.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-binoculars" style="color: #fd7e14;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Cultural Tours</h3>
-                    </a>
-                    <p>Explore local heritage and hidden gems through guided tours tailored to your interests.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-camera" style="color: #20c997;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Photography Workshops</h3>
-                    </a>
-                    <p>Learn how to capture the beauty of pottery and landscapes with professional photography guidance.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-person-check" style="color: #df1529;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Custom Pottery Orders</h3>
-                    </a>
-                    <p>Get personalized pottery creations designed to your specifications and style preferences.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-map" style="color: #6610f2;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Local Experience Packages</h3>
-                    </a>
-                    <p>Immerse yourself in authentic local experiences combining pottery, food, and cultural activities.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-clock-history" style="color: #f3268c;"></i>
-                    </div>
-                    <a href="service-details.html" class="stretched-link">
-                        <h3>Workshop Scheduling</h3>
-                    </a>
-                    <p>Easily book and schedule your participation in our hands-on pottery and cultural workshops.</p>
-                </div>
-            </div><!-- End Service Item -->
-        </div>
+      <h2>Our Services</h2>
+      <p>What We Offer</p>
     </div>
-</section><!-- /Services Section -->
+  
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-brush fs-1" style="color: #0dcaf0;"></i>
+            </div>
+            <h3>Handcrafted Pottery</h3>
+            <p>Unique and authentic pottery pieces made by skilled artisans, perfect for your home or gifts.</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-binoculars fs-1" style="color: #fd7e14;"></i>
+            </div>
+            <h3>Cultural Tours</h3>
+            <p>Explore local heritage and hidden gems through guided tours tailored to your interests.</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-camera fs-1" style="color: #20c997;"></i>
+            </div>
+            <h3>Photography Workshops</h3>
+            <p>Learn how to capture the beauty of pottery and landscapes with professional photography guidance.</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-person-check fs-1" style="color: #df1529;"></i>
+            </div>
+            <h3>Custom Pottery Orders</h3>
+            <p>Get personalized pottery creations designed to your specifications and style preferences.</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-map fs-1" style="color: #6610f2;"></i>
+            </div>
+            <h3>Local Experience Packages</h3>
+            <p>Immerse yourself in authentic local experiences combining pottery, food, and cultural activities.</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="card h-100 text-center p-4">
+            <div class="mb-3">
+              <i class="bi bi-clock-history fs-1" style="color: #f3268c;"></i>
+            </div>
+            <h3>Workshop Scheduling</h3>
+            <p>Easily book and schedule your participation in our hands-on pottery and cultural workshops.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- /Services Section -->
 
 <!-- Faq Section -->
 <section id="faq" class="faq section">
