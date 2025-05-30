@@ -9,7 +9,7 @@
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Khazf</span></h2>
                     <p class="animate__animated animate__fadeInUp">
-                        An online platform that connects tourists and locals with unique cultural and adventure experiences across Jordan. 
+                        An online platform that connects tourists and locals with unique cultural and adventure experiences across Jordan.
                         Discover local workshops, explore authentic destinations, and create unforgettable memories with <span>Khazf</span>.
                     </p>
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">
@@ -21,7 +21,7 @@
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Explore Authentic Experiences</h2>
                     <p class="animate__animated animate__fadeInUp">
-                        From traditional cooking classes to desert adventures and cultural workshops — Khazf offers hand-picked experiences 
+                        From traditional cooking classes to desert adventures and cultural workshops — Khazf offers hand-picked experiences
                         that let you connect with Jordan’s heart and soul. Start your journey with us and live like a local.
                     </p>
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click here</a>
@@ -32,7 +32,7 @@
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Uncover Jordan’s Hidden Gems</h2>
                     <p class="animate__animated animate__fadeInUp">
-                        Go beyond the typical tourist spots and dive into truly local experiences. Whether it's exploring ancient trails, 
+                        Go beyond the typical tourist spots and dive into truly local experiences. Whether it's exploring ancient trails,
                         joining a Bedouin storytelling night, or learning traditional crafts — Khazf connects you to the real Jordan.
                     </p>
                     <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">
@@ -76,8 +76,8 @@ Click here</a>
         <div class="row gy-4">
             <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
                 <p>
-                    Khazf is an online platform designed to connect tourists and local explorers with authentic cultural 
-                    and adventure experiences across Jordan. Our mission is to promote local tourism and support passionate 
+                    Khazf is an online platform designed to connect tourists and local explorers with authentic cultural
+                    and adventure experiences across Jordan. Our mission is to promote local tourism and support passionate
                     experience providers in sharing their stories with the world.
                 </p>
                 <ul>
@@ -89,8 +89,8 @@ Click here</a>
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <p>
-                    Whether you’re visiting for the first time or a local seeking new adventures, Khazf offers a unique 
-                    gateway to explore Jordan like never before. From culinary workshops to desert escapes, each experience 
+                    Whether you’re visiting for the first time or a local seeking new adventures, Khazf offers a unique
+                    gateway to explore Jordan like never before. From culinary workshops to desert escapes, each experience
                     is a journey into the heart of Jordanian culture.
                 </p>
             </div>
@@ -234,7 +234,7 @@ Click here</a>
       <h2>Our Services</h2>
       <p>What We Offer</p>
     </div>
-  
+
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -246,7 +246,7 @@ Click here</a>
             <p>Unique and authentic pottery pieces made by skilled artisans, perfect for your home or gifts.</p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100 text-center p-4">
             <div class="mb-3">
@@ -256,7 +256,7 @@ Click here</a>
             <p>Explore local heritage and hidden gems through guided tours tailored to your interests.</p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="card h-100 text-center p-4">
             <div class="mb-3">
@@ -266,7 +266,7 @@ Click here</a>
             <p>Learn how to capture the beauty of pottery and landscapes with professional photography guidance.</p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="card h-100 text-center p-4">
             <div class="mb-3">
@@ -276,7 +276,7 @@ Click here</a>
             <p>Get personalized pottery creations designed to your specifications and style preferences.</p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
           <div class="card h-100 text-center p-4">
             <div class="mb-3">
@@ -286,7 +286,7 @@ Click here</a>
             <p>Immerse yourself in authentic local experiences combining pottery, food, and cultural activities.</p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
           <div class="card h-100 text-center p-4">
             <div class="mb-3">
@@ -299,7 +299,7 @@ Click here</a>
       </div>
     </div>
   </section>
-  
+
   <!-- /Services Section -->
 
 <!-- Faq Section -->
@@ -325,7 +325,7 @@ Click here</a>
                         <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordion-faq">
                             <div class="accordion-body">
-                                You can book a workshop directly through our website by selecting your preferred date and time. 
+                                You can book a workshop directly through our website by selecting your preferred date and time.
                                 We also accept bookings via phone or email for personalized assistance.
                             </div>
                         </div>
@@ -341,7 +341,7 @@ Click here</a>
                         </h2>
                         <div id="collapse-faq-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faq">
                             <div class="accordion-body">
-                                Absolutely! Our tours and workshops are designed to welcome all skill levels, including complete beginners. 
+                                Absolutely! Our tours and workshops are designed to welcome all skill levels, including complete beginners.
                                 Our expert guides will provide step-by-step instructions to ensure a rewarding experience.
                             </div>
                         </div>
@@ -358,7 +358,7 @@ Click here</a>
 
                         <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
                             <div class="accordion-body">
-                                Yes, we offer custom pottery services where you can choose designs, colors, and sizes. 
+                                Yes, we offer custom pottery services where you can choose designs, colors, and sizes.
                                 Contact us to discuss your ideas and we will create a unique piece just for you.
                             </div>
                         </div>
@@ -405,75 +405,121 @@ Click here</a>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div><!-- End Section Title -->
-        <div class="container" data-aos="fade" data-aos-delay="100">
-            <div class="row gy-4">
-                <div class="col-lg-4">
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-geo-alt flex-shrink-0"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>Jordan</p>
-                        </div>
-                    </div><!-- End Info Item -->
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-telephone flex-shrink-0"></i>
-                        <div>
-                            <h3>Call Us</h3>
-                            <p>0777777777</p>
-                        </div>
-                    </div><!-- End Info Item -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+    </div>
 
-                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                        <i class="bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                            <h3>Email Us</h3>
-                            <p>Khazf@Gmail.com</p>
-                        </div>
-                    </div><!-- End Info Item -->
+    <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-geo-alt flex-shrink-0"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Jordan</p>
+                    </div>
                 </div>
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-telephone flex-shrink-0"></i>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>0777777777</p>
+                    </div>
+                </div>
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-envelope flex-shrink-0"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>Khazf@Gmail.com</p>
+                    </div>
+                </div>
+            </div>
 
-                <div class="col-lg-8">
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="row gy-4">
+            <div class="col-lg-8">
+                <form action="{{ route('contact.store') }}" method="POST">
+                    @csrf
 
-                            <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                            </div>
+                    @if(session('success'))
+    <div style="background-color: #ff6b00; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align:center;">
+        {{ session('success') }}
+    </div>
+@endif
 
-                            <div class="col-md-6 ">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                    required="">
-                            </div>
 
-                            <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                    required="">
-                            </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
-                            <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                    required=""></textarea>
-                            </div>
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
 
-                            <div class="col-md-12 text-center">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                        <div class="col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
 
-                                <button type="submit">Send Message</button>
-                            </div>
+                        <div class="col-md-12">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn" style="background-color: #ff6b00; color: white; font-weight: bold;">
+    Send Message
+</button>
 
                         </div>
-                    </form>
-                </div><!-- End Contact Form -->
-            </div>
+                    </div>
+                </form>
+               @if(session('success'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+            title: 'Success',
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonColor: '#ff6b00', // برتقالي مثل زر Contact
+            background: '#2e2e36', // رمادي غامق مثل الهيدر
+            color: '#ffffff', // خط أبيض
+        });
+    });
+</script>
+@endif
+
+
+            </div> <!-- End Contact Form -->
         </div>
-    </section><!-- /Contact Section -->
+    </div>
+</section>
+<!-- /Contact Section -->
 </main>
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title w-100" id="successModalLabel">Success</h5>
+      </div>
+      <div class="modal-body">
+        Your message has been sent successfully!
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 @include('component.footer')
