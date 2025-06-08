@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ExperiencesController;
+use App\Http\Controllers\ReviewController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +33,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->n
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/experiences', [ExperiencesController::class, 'index'])->name('experiences.index');
 Route::get('/experiences/{id}', [ExperiencesController::class, 'show'])->name('experiences.show');
+Route::post('/experience/{id}/book', [ExperiencesController::class, 'storeBooking'])->name('experience.book');
+
+Route::post('/experiences/{experience}/reviews', [ReviewController::class, 'storeReview'])
+    ->name('reviews.store');
