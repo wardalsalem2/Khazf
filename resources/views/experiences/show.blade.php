@@ -1,4 +1,15 @@
 @include('component.header')
+
+@if(session('message'))
+    <div id="successModal" class="modal" style="display:block;">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('successModal').style.display='none'">&times;</span>
+            <h4 style="color: green;">{{ session('message') }}</h4>
+        </div>
+    </div>
+@endif
+
+
 @php
 function displayStars($rating) {
     $stars = '';

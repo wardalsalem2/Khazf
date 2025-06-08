@@ -13,27 +13,27 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function showRegister() {
-        return view('auth.register');
-    }
+    // public function showRegister() {
+    //     return view('auth.register');
+    // }
 
-    public function register(Request $request) {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+    // public function register(Request $request) {
+    //     $request->validate([
+    //         'name' => 'required',
+    //         'email' => 'required|email|unique:users',
+    //         'password' => 'required|min:6|confirmed',
+    //     ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'role' => 'user',
-        ]);
+    //     $user = User::create([
+    //         'name' => $request->name,
+    //         'email' => $request->email,
+    //         'password' => bcrypt($request->password),
+    //         'role' => 'user',
+    //     ]);
 
-        Auth::login($user);
-        return redirect()->intended('/');
-    }
+    //     Auth::login($user);
+    //     return redirect()->intended('/');
+    // }
 
     public function login(Request $request) {
         $credentials = $request->validate([

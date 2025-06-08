@@ -1,4 +1,4 @@
-@include('component.header')
+{{-- @include('component.header')
 
 <section class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background: #f8f8f8;">
     <div class="card shadow-sm p-4" style="width: 100%; max-width: 500px;">
@@ -41,4 +41,4 @@
     </div>
 </section>
 
-@include('component.footer')
+@include('component.footer') --}}

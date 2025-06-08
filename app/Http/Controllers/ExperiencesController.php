@@ -78,8 +78,8 @@ $booking = Booking::create([
         'transaction_id' => $validated['transaction_id'],
     ]);
 
-    return back()->with('success', 'Booking and payment recorded successfully!');
-}
+return redirect()->route('experiences.show', ['id' => $id])
+                 ->with('message', 'Booking and payment recorded successfully!');
 }
 
-
+}

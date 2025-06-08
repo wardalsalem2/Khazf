@@ -47,7 +47,7 @@
                     <li><a href="{{ route('home') }}#contact"
                             class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a></li>
 
-                    @guest
+                    {{-- @guest
                         <li><a href="{{ route('login') }}"
                                 class="{{ request()->is('login') ? 'active' : '' }} nav-link">Login</a></li>
                     @else
@@ -60,7 +60,7 @@
                                 @csrf
                             </form>
                         </li>
-                    @endguest
+                    @endguest --}}
 
 
 
