@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ExperiencesController;
@@ -13,6 +14,27 @@ use App\Http\Controllers\ExperiencesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+    // Dashboard
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+
+    // Profile
+    Route::get('/profile/edit', [AdminController::class, 'editProfile'])->name('profile.edit');
+    Route::post('/profile/update', [AdminController::class, 'updateProfile'])->name('profile.update');
+
+    // Experiences
+    Route::get('/experiences', [AdminController::class, 'manageExperiences'])->name('experiences.index');
+    Route::get('/experiences/create', [AdminController::class, 'createExperience'])->name('experiences.create');
+    Route::post('/experiences', [AdminController::class, 'storeExperience'])->name('experiences.store');
+    Route::get('/experiences/{id}/edit', [AdminController::class, 'editExperience'])->name('experiences.edit');
+    Route::put('/experiences/{id}', [AdminController::class, 'updateExperience'])->name('experiences.update');
+    Route::delete('/experiences/{id}', [AdminController::class, 'destroyExperience'])->name('experiences.destroy'); // هذا هو الراوت الذي كان ناقص
+});
+
+
+
 use App\Http\Controllers\ContactController;
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
