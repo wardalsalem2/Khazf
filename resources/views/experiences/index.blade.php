@@ -93,9 +93,54 @@
 </style>
 
 <div class="container experiences-section">
+
+    <form action="{{ route('experiences.index') }}" method="GET" class="mb-4 d-flex flex-wrap gap-3 align-items-center">
+
+        <!-- Dropdown Location -->
+        <select name="location" class="form-select" style="max-width: 200px;">
+            <option value=""> Select Location </option>
+            <option value="Amman" {{ request('location') == 'Amman' ? 'selected' : '' }}>Amman</option>
+            <option value="Irbid" {{ request('location') == 'Irbid' ? 'selected' : '' }}>Irbid</option>
+            <option value="Zarqa" {{ request('location') == 'Zarqa' ? 'selected' : '' }}>Zarqa</option>
+            <option value="Mafraq" {{ request('location') == 'Mafraq' ? 'selected' : '' }}>Mafraq</option>
+            <option value="Madaba" {{ request('location') == 'Madaba' ? 'selected' : '' }}>Madaba</option>
+            <option value="Jerash" {{ request('location') == 'Jerash' ? 'selected' : '' }}>Jerash</option>
+            <option value="Ajloun" {{ request('location') == 'Ajloun' ? 'selected' : '' }}>Ajloun</option>
+            <option value="Karak" {{ request('location') == 'Karak' ? 'selected' : '' }}>Karak</option>
+            <option value="Tafilah" {{ request('location') == 'Tafilah' ? 'selected' : '' }}>Tafilah</option>
+            <option value="Ma'an" {{ request('location') == "Ma'an" ? 'selected' : '' }}>Ma'an</option>
+            <option value="Aqaba" {{ request('location') == 'Aqaba' ? 'selected' : '' }}>Aqaba</option>
+            <option value="Balqa" {{ request('location') == 'Balqa' ? 'selected' : '' }}>Balqa</option>
+        </select>
+
+        <!-- Title input -->
+        <input 
+            type="text" 
+            name="title" 
+            value="{{ request('title') }}" 
+            placeholder="Search by Title" 
+            class="form-control" 
+            style="max-width: 200px;"
+        />
+
+        <!-- Description input -->
+        <input 
+            type="text" 
+            name="description" 
+            value="{{ request('description') }}" 
+            placeholder="Search by Description" 
+            class="form-control" 
+            style="max-width: 200px;"
+        />
+
+        <button type="submit" class="btn btn-primary">Search</button>
+        <a href="{{ route('experiences.index') }}" class="btn btn-secondary">Reset</a>
+    </form>
+
     <h1>Available Experiences</h1>
+
     <div class="row">
-        @foreach ($experiences as $experience)
+        @forelse ($experiences as $experience)
             <div class="col-md-4 mb-4 d-flex">
                 <div class="card">
                     @if($experience->images->first())
@@ -110,8 +155,11 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+        @empty
+            <p>No experiences found.</p>
+        @endforelse
     </div>
 </div>
+
 
 @include('component.footer')

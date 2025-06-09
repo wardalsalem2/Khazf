@@ -669,11 +669,8 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  background-image: url('/storage/images/homejpeg.jpeg');
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
+  background-image: url('/storage/images/home2.png');
   background-repeat: no-repeat;
   padding: 0;
   display: flex;

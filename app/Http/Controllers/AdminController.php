@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Experience;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+                $experiences = Experience::all();
+
+        return view('admin.dashboard',compact('experiences'));
     }
 
     public function editProfile()
@@ -40,15 +43,16 @@ class AdminController extends Controller
         return redirect()->route('admin.profile.edit')->with('success', 'Profile updated successfully.');
     }
 
-    public function manageExperiences()
-    {
-        $experiences = Experience::all();
-        return view('admin.experiences.index', compact('experiences'));
-    }
+    // public function manageExperiences()
+    // {
+    //     $experiences = Experience::all();
+    //     return view('admin.experiences.index', compact('experiences'));
+    // }
     public function createExperience()
-{
-    return view('admin.experiences.create');
-}
+    {
+        return view('admin.experiences.create');
+    }
+
 
 public function storeExperience(Request $request)
 {
@@ -59,45 +63,81 @@ public function storeExperience(Request $request)
         'price' => 'required|numeric',
         'duration' => 'required|string',
         'categories' => 'required|string',
-        'status' => 'required|string',
+        'status' => 'required|string|in:active,inactive',
         'date' => 'required|date',
+        'images.*' => 'required|image|mimes:jpg,jpeg,png|max:2048',
     ]);
 
-    \App\Models\Experience::create($request->all());
+    $experience = Experience::create($request->only([
+        'title',
+        'description',
+        'location',
+        'price',
+        'duration',
+        'categories',
+        'status',
+        'date'
+    ]));
 
-    return redirect()->route('admin.experiences.index')->with('success', 'Experience added successfully.');
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $image) {
+            $path = $image->store('experience_images', 'public'); 
+            $experience->images()->create([
+                'image_path' => $path, 
+            ]);
+        }
+    }
+
+    return redirect()->route('admin.dashboard')->with('success', 'Experience added successfully.');
 }
-public function editExperience($id)
+
+    public function editExperience($id)
     {
         $experience = Experience::findOrFail($id);
         return view('admin.experiences.edit', compact('experience'));
     }
 
-    public function updateExperience(Request $request, $id)
-    {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'location' => 'required|string',
-            'price' => 'required|numeric',
-            'duration' => 'required|string',
-            'date' => 'required|date',
-            'categories' => 'required|string',
-            'status' => 'required|in:active,inactive',
-        ]);
 
-        $experience = Experience::findOrFail($id);
-        $experience->update($request->all());
+public function updateExperience(Request $request, $id)
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'description' => 'required|string',
+        'location' => 'required|string',
+        'price' => 'required|numeric',
+        'duration' => 'required|string',
+        'date' => 'required|date',
+        'categories' => 'required|string',
+        'status' => 'required|in:active,inactive',
+        'images.*' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+    ]);
 
-        return redirect()->route('admin.experiences.index')->with('success', 'Experience updated successfully.');
+    $experience = Experience::findOrFail($id);
+
+    $experience->update($request->only([
+        'title', 'description', 'location', 'price', 'duration', 'date', 'categories', 'status',
+    ]));
+
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $image) {
+            $path = $image->store('experience_images', 'public'); 
+            $experience->images()->create([
+                'image_path' => $path,
+            ]);
+        }
     }
 
-    public function destroyExperience($id)
-{
-    $experience = Experience::findOrFail($id);
-    $experience->delete();
-
-    return redirect()->route('admin.experiences.index')->with('success', 'Experience deleted successfully.');
+    return redirect()->route('admin.dashboard')->with('success', 'Experience updated successfully.');
 }
+
+
+
+    public function destroyExperience($id)
+    {
+        $experience = Experience::findOrFail($id);
+        $experience->delete();
+
+        return redirect()->route('admin.dashboard')->with('success', 'Experience deleted successfully.');
+    }
 
 }

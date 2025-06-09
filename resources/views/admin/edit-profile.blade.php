@@ -32,12 +32,12 @@
                     👤 Edit Profile
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            {{-- <li class="nav-item mb-2">
                 <a href="{{ route('admin.experiences.index') }}"
                    class="nav-link text-white {{ request()->routeIs('admin.experiences.*') ? 'active' : '' }}">
                     🛍️ Manage Products
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item mt-4">
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

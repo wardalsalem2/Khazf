@@ -139,14 +139,66 @@ function displayStars($rating) {
         background-color: #28a745;
         color: #fff;
     }
-        .star {
-    font-size: 20px;
-    color: #ffd700; /* gold color */
-    margin-right: 2px;
+    .reviews-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-.star.empty {
-    color: #ccc;
+.reviews-list, .your-review {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    flex: 1 1 45%; 
+    max-width: 600px;
+    overflow-y: auto;
+    max-height: 600px;
 }
+.review-item {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+.review-item:hover {
+    background-color: #e6f0ff;
+}
+
+.review-item strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.review-item p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+.review-item small {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.your-review h3 {
+    margin-bottom: 20px;
+    color: #222;
+}
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+.star {
+  color: #f5c518; 
+  font-size: 1.2rem;
+}
+
 </style>
 <div class="container experience-details">
     <h1>{{ $experience->title }}</h1>
@@ -213,58 +265,62 @@ function displayStars($rating) {
         </div>
     </div>
 @endif
-<div class="container mt-5">
-    <h2>Reviews</h2>
-    @if ($experience->reviews->count() > 0)
-        @foreach ($experience->reviews as $review)
-            <div class="review-item mb-3 p-3 border rounded">
-                <strong>{{ $review->user->name ?? 'Anonymous' }}</strong> <br>
-                <span>{!! displayStars($review->rating) !!}</span>
-                <p>{{ $review->comment }}</p>
-                <small class="text-muted">{{ $review->created_at->format('M d, Y') }}</small>
+
+<div class="container mt-5 reviews-container">
+    <div class="reviews-list">
+        <h2>Reviews</h2>
+        @if ($experience->reviews->count() > 0)
+            @foreach ($experience->reviews as $review)
+                <div class="review-item mb-3 p-3 border rounded">
+                    <strong>{{ $review->user->name ?? 'Anonymous' }}</strong> <br>
+                    <span>{!! displayStars($review->rating) !!}</span>
+                    <p>{{ $review->comment }}</p>
+                    <small class="text-muted">{{ $review->created_at->format('M d, Y') }}</small>
+                </div>
+            @endforeach
+        @else
+            <p>No reviews yet. Be the first to review this experience!</p>
+        @endif
+    </div>
+
+    <div class="your-review">
+        <h3>Your Review</h3>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
-        @endforeach
-    @else
-        <p>No reviews yet. Be the first to review this experience!</p>
-    @endif
-</div>
-<div class="container mt-4">
-    <h3>Your Review</h3>
-       @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{ route('reviews.store', $experience->id) }}" method="POST">
-        @csrf
-        <div class="form-group mb-2">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" required placeholder="Your email">
-            @error('email')
-    <div class="text-danger">{{ $message }}</div>
-@enderror
-        </div>
-        <div class="form-group mb-2">
-            <label for="rating">Rating</label>
-            <select name="rating" id="rating" class="form-control" required>
-                <option value="" disabled selected>Select rating</option>
-                <option value="5">★★★★★ (5 stars)</option>
-                <option value="4">★★★★☆ (4 stars)</option>
-                <option value="3">★★★☆☆ (3 stars)</option>
-                <option value="2">★★☆☆☆ (2 stars)</option>
-                <option value="1">★☆☆☆☆ (1 star)</option>
-            </select>
-        </div>
-        <div class="form-group mb-2">
-            <label for="comment">Comment</label>
-            <textarea name="comment" id="comment" rows="4" class="form-control" placeholder="Write your review (optional)"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary mb-5">Submit Review</button>
-    </form>
+        @endif
+        <form action="{{ route('reviews.store', $experience->id) }}" method="POST">
+            @csrf
+            <div class="form-group mb-2">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required placeholder="Your email">
+                @error('email')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="form-group mb-2">
+                <label for="rating">Rating</label>
+                <select name="rating" id="rating" class="form-control" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="5">★★★★★ (5 stars)</option>
+                    <option value="4">★★★★☆ (4 stars)</option>
+                    <option value="3">★★★☆☆ (3 stars)</option>
+                    <option value="2">★★☆☆☆ (2 stars)</option>
+                    <option value="1">★☆☆☆☆ (1 star)</option>
+                </select>
+            </div>
+            <div class="form-group mb-2">
+                <label for="comment">Comment</label>
+                <textarea name="comment" id="comment" rows="6" class="form-control" placeholder="Write your review (optional)"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-5">Submit Review</button>
+        </form>
+    </div>
 </div>
 
 
