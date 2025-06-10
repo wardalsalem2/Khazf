@@ -7,12 +7,12 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Khazf</span></h2>
+                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>KHAZF</span></h2>
                     <p class="animate__animated animate__fadeInUp">
                         An online platform that connects tourists and locals with unique cultural and adventure
                         experiences across Jordan.
-                        Discover local workshops, explore authentic destinations, and create unforgettable memories with
-                        <span>Khazf</span>.
+                        Discover local workshops, explore hentic destinations, and create unforgettable memories with
+                        <span>KHAZF</span>.
                     </p>
                     <a href="{{ route('experiences.index') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">
                         Click here</a>
@@ -23,7 +23,7 @@
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Explore Authentic Experiences</h2>
                     <p class="animate__animated animate__fadeInUp">
-                        From traditional cooking classes to desert adventures and cultural workshops — Khazf offers
+                        From traditional cooking classes to desert adventures and cultural workshops — KHAZF offers
                         hand-picked experiences
                         that let you connect with Jordan’s heart and soul. Start your journey with us and live like a
                         local.
@@ -38,7 +38,7 @@
                     <p class="animate__animated animate__fadeInUp">
                         Go beyond the typical tourist spots and dive into truly local experiences. Whether it's
                         exploring ancient trails,
-                        joining a Bedouin storytelling night, or learning traditional crafts — Khazf connects you to the
+                        joining a Bedouin storytelling night, or learning traditional crafts — KHAZF connects you to the
                         real Jordan.
                     </p>
                     <a href="{{ route('experiences.index') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">
@@ -82,7 +82,7 @@
             <div class="row gy-4">
                 <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
                     <p>
-                        Khazf is an online platform designed to connect tourists and local explorers with authentic
+                        KHAZF is an online platform designed to connect tourists and local explorers with authentic
                         cultural
                         and adventure experiences across Jordan. Our mission is to promote local tourism and support
                         passionate
@@ -100,7 +100,7 @@
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <p>
-                        Whether you’re visiting for the first time or a local seeking new adventures, Khazf offers a
+                        Whether you’re visiting for the first time or a local seeking new adventures, KHAZF offers a
                         unique
                         gateway to explore Jordan like never before. From culinary workshops to desert escapes, each
                         experience
@@ -396,7 +396,7 @@
                         <i class="bi bi-envelope flex-shrink-0"></i>
                         <div>
                             <h3>Email Us</h3>
-                            <p>Khazf@Gmail.com</p>
+                            <p>KHAZF@Gmail.com</p>
                         </div>
                     </div>
                 </div>

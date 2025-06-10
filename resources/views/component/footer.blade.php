@@ -1,6 +1,6 @@
 <footer id="footer" class="footer dark-background">
     <div class="container text-center">
-        <h3 class="sitename">Khazf</h3>
+        <h3 class="sitename">KHAZF</h3>
         <p>Discover authentic pottery experiences and explore unique cultural tours with us.</p>
         <div class="social-links d-flex justify-content-center my-3">
             <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
@@ -10,7 +10,7 @@
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
         <div class="copyright">
-            &copy; <strong class="sitename">Khazf</strong>. All Rights Reserved.
+            &copy; <strong class="sitename">KHAZF</strong>. All Rights Reserved.
         </div>
     </div>
 </footer>

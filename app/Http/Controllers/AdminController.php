@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\ExperienceImage;
 use Illuminate\Http\Request;
 use App\Models\Experience;
 use Illuminate\Support\Facades\Storage;
@@ -10,9 +10,9 @@ class AdminController extends Controller
 {
     public function index()
     {
-                $experiences = Experience::all();
+        $experiences = Experience::all();
 
-        return view('admin.dashboard',compact('experiences'));
+        return view('admin.dashboard', compact('experiences'));
     }
 
     public function editProfile()
@@ -54,42 +54,42 @@ class AdminController extends Controller
     }
 
 
-public function storeExperience(Request $request)
-{
-    $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'location' => 'required|string',
-        'price' => 'required|numeric',
-        'duration' => 'required|string',
-        'categories' => 'required|string',
-        'status' => 'required|string|in:active,inactive',
-        'date' => 'required|date',
-        'images.*' => 'required|image|mimes:jpg,jpeg,png|max:2048',
-    ]);
+    public function storeExperience(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'location' => 'required|string',
+            'price' => 'required|numeric',
+            'duration' => 'required|string',
+            'categories' => 'required|string',
+            'status' => 'required|string|in:active,inactive',
+            'date' => 'required|date',
+            'images.*' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
 
-    $experience = Experience::create($request->only([
-        'title',
-        'description',
-        'location',
-        'price',
-        'duration',
-        'categories',
-        'status',
-        'date'
-    ]));
+        $experience = Experience::create($request->only([
+            'title',
+            'description',
+            'location',
+            'price',
+            'duration',
+            'categories',
+            'status',
+            'date'
+        ]));
 
-    if ($request->hasFile('images')) {
-        foreach ($request->file('images') as $image) {
-            $path = $image->store('experience_images', 'public'); 
-            $experience->images()->create([
-                'image_path' => $path, 
-            ]);
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('experience_images', 'public');
+                $experience->images()->create([
+                    'image_path' => $path,
+                ]);
+            }
         }
-    }
 
-    return redirect()->route('admin.dashboard')->with('success', 'Experience added successfully.');
-}
+        return redirect()->route('admin.dashboard')->with('success', 'Experience added successfully.');
+    }
 
     public function editExperience($id)
     {
@@ -98,38 +98,57 @@ public function storeExperience(Request $request)
     }
 
 
-public function updateExperience(Request $request, $id)
-{
-    $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'location' => 'required|string',
-        'price' => 'required|numeric',
-        'duration' => 'required|string',
-        'date' => 'required|date',
-        'categories' => 'required|string',
-        'status' => 'required|in:active,inactive',
-        'images.*' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-    ]);
+    public function updateExperience(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'location' => 'required|string',
+            'price' => 'required|numeric',
+            'duration' => 'required|string',
+            'date' => 'required|date',
+            'categories' => 'required|string',
+            'status' => 'required|in:active,inactive',
+            'images.*' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
 
-    $experience = Experience::findOrFail($id);
+        $experience = Experience::findOrFail($id);
 
-    $experience->update($request->only([
-        'title', 'description', 'location', 'price', 'duration', 'date', 'categories', 'status',
-    ]));
+        $experience->update($request->only([
+            'title',
+            'description',
+            'location',
+            'price',
+            'duration',
+            'date',
+            'categories',
+            'status',
+        ]));
 
-    if ($request->hasFile('images')) {
-        foreach ($request->file('images') as $image) {
-            $path = $image->store('experience_images', 'public'); 
-            $experience->images()->create([
-                'image_path' => $path,
-            ]);
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('experience_images', 'public');
+                $experience->images()->create([
+                    'image_path' => $path,
+                ]);
+            }
         }
+        if ($request->has('delete_images')) {
+            foreach ($request->delete_images as $imageId) {
+                $image = $experience->images()->find($imageId);
+                if ($image) {
+                    if (Storage::disk('public')->exists($image->image_path)) {
+                        Storage::disk('public')->delete($image->image_path);
+                    }
+                    $image->delete();
+                }
+            }
+        }
+
+
+
+        return redirect()->route('admin.dashboard')->with('success', 'Experience updated successfully.');
     }
-
-    return redirect()->route('admin.dashboard')->with('success', 'Experience updated successfully.');
-}
-
 
 
     public function destroyExperience($id)

@@ -121,11 +121,24 @@
                         <label class="form-label">Current Images</label>
                         <div class="d-flex flex-wrap gap-2">
                             @foreach ($experience->images as $img)
-                                <img src="{{ asset('storage/' . $img->image_path) }}" alt="Experience Image"
-                                    style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;">
+                                <div style="position: relative; width: 100px; height: 100px;">
+                                    <img src="{{ asset('storage/' . $img->image_path) }}" alt="Experience Image"
+                                        style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ccc; border-radius: 4px;">
+                                    <div style="position: absolute; top: 4px; right: 4px;">
+                                        <input type="checkbox" name="delete_images[]" value="{{ $img->id }}"
+                                            title="Check to delete this image">
+                                    </div>
+                                </div>
                             @endforeach
                         </div>
+                        <small class="text-muted mt-1 d-block">
+                            Select the photos you want to delete by clicking on the checkbox, then click “Update” to delete them. If you don't press
+                            Update, no photo will be deleted.
+                        </small>
                     </div>
+
+
+
 
                     <div class="mb-3">
                         <label class="form-label">Upload New Images (optional)</label>
